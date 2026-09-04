@@ -92,7 +92,8 @@ async function loadGames() {
     'Backrooms.html',
     'Slither io.html',
     'Super Hot.html',
-    'There is no Game.html'
+    'There is no Game.html',
+    'Doom 64.html'
   ];
   renderCards(knownGames);
 }
