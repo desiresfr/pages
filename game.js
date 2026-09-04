@@ -93,7 +93,8 @@ async function loadGames() {
     'Slither io.html',
     'Super Hot.html',
     'There is no Game.html',
-    'Friday Night Funkin.html'
+    'Friday Night Funkin.html',
+    'FNAF UCN.html'
   ];
   renderCards(knownGames);
 }
