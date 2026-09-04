@@ -1,2 +1,209 @@
-.home-hero{align-items:center;background:radial-gradient(ellipse at 50% 45%,#0c4c10 0,#031c07 36%,#010603 76%);display:flex;justify-content:center;min-height:650px;overflow:hidden;position:relative;text-align:center}.home-hero:before,.home-hero:after{border:1px solid rgba(53,255,53,.22);border-radius:50%;content:'';height:720px;left:50%;position:absolute;top:75px;transform:translateX(-50%) rotate(-9deg);width:145%}.home-hero:after{height:480px;opacity:.55;top:195px;transform:translateX(-50%) rotate(15deg);width:110%}.hero-stars{background-image:radial-gradient(circle,#35ff35 0 1px,transparent 2px),radial-gradient(circle,#b6ff9c 0 1px,transparent 2px);background-position:10% 20%,80% 35%;background-size:180px 150px,260px 220px;inset:0;opacity:.65;position:absolute}.home-hero-content{position:relative;z-index:1}.hero-logo{filter:drop-shadow(0 0 25px rgba(53,255,53,.95));height:190px;object-fit:contain;width:190px}.hero-wordmark{color:#fff;font:700 74px/0.75 'Space Grotesk',sans-serif;letter-spacing:-.1em;margin:0 0 30px;text-shadow:0 0 18px rgba(255,255,255,.5)}.home-hero h1{color:#eaffea;font:500 clamp(28px,5vw,54px)/1.1 'Space Grotesk',sans-serif;letter-spacing:.02em;margin:0;min-height:60px;text-shadow:0 0 18px rgba(192,255,177,.65)}.cursor{animation:blink 1s steps(2) infinite;color:var(--green)}.hero-copy{color:#99c299;font-size:13px;margin:13px 0 25px}.glow-button,.outline-button{align-items:center;display:inline-flex;font:500 11px var(--mono);gap:24px;padding:14px 18px;text-transform:uppercase}.glow-button{background:var(--green);box-shadow:0 0 12px var(--green),0 0 38px rgba(53,255,53,.3);color:#031004}.glow-button:hover{box-shadow:0 0 22px var(--green),0 0 55px rgba(53,255,53,.5);transform:translateY(-2px)}.glow-button span,.outline-button span{font-size:18px}.hero-code,.hero-scroll{bottom:27px;color:#54895c;font-size:9px;letter-spacing:.08em;position:absolute}.hero-code{right:30px}.hero-scroll{left:30px}.movies-section{background:#020803;border-top:1px solid var(--line);padding:72px 6vw 95px}.section-kicker{color:var(--green);font-size:10px;letter-spacing:.12em;margin:0 0 18px;text-shadow:0 0 10px var(--green);text-transform:uppercase}.section-title-row{align-items:end;display:flex;justify-content:space-between}.movies-section h2,.quick-section h2{color:#e7ffe4;font:600 clamp(38px,6vw,68px)/.9 'Space Grotesk',sans-serif;letter-spacing:-.08em;margin:0;text-shadow:0 0 19px rgba(53,255,53,.35)}.view-button,.watch-button{background:none;border:0;color:var(--green);cursor:pointer;font:10px var(--mono);text-transform:uppercase}.view-button span,.watch-button span{font-size:17px;margin-left:7px}.movie-shelf{display:grid;gap:20px;grid-template-columns:repeat(3,1fr);margin-top:39px}.movie-card{background:#061308;border:1px solid rgba(53,255,53,.26);box-shadow:0 0 18px rgba(53,255,53,.08);transition:.25s}.movie-card:hover{border-color:var(--green);box-shadow:0 0 23px rgba(53,255,53,.3);transform:translateY(-4px)}.movie-art{align-items:end;display:flex;height:175px;justify-content:space-between;overflow:hidden;padding:17px;position:relative}.movie-art:before{border:1px solid rgba(53,255,53,.4);border-radius:50%;content:'';height:230px;left:16%;position:absolute;top:25px;width:180px}.movie-art span{color:var(--green);font:700 31px/.84 'Space Grotesk',sans-serif;letter-spacing:-.07em;position:relative;text-shadow:0 0 15px var(--green)}.movie-art i{color:#c4ffc0;font-size:10px;font-style:normal;position:relative}.movie-one .movie-art{background:radial-gradient(circle at 65% 40%,#176d1d,#030d04)}.movie-two .movie-art{background:radial-gradient(circle at 40% 40%,#116a18,#030e04)}.movie-three .movie-art{background:radial-gradient(circle at 55% 45%,#1a751f,#030d04)}.movie-details{padding:15px}.movie-details h3{color:#d8ffd3;font:600 17px 'Space Grotesk',sans-serif;margin:0 0 5px}.movie-details p{color:#6c9e70;font-size:10px;margin:0 0 13px}.progress{background:#142919;height:3px}.progress span{background:var(--green);box-shadow:0 0 8px var(--green);display:block;height:100%}.watch-button{border-top:1px solid var(--line);padding:13px 15px;text-align:left;width:100%}.quick-section{align-items:center;background:radial-gradient(circle at 80%,#0c4212,#010603 60%);border-top:1px solid var(--line);display:flex;justify-content:space-between;padding:78px 12vw}.quick-section h2 em{color:var(--green);font-style:normal}.outline-button{border:1px solid var(--green);box-shadow:0 0 13px rgba(53,255,53,.25);color:var(--green)}.outline-button:hover{background:var(--green);box-shadow:0 0 20px var(--green);color:#031004}.game-landing{align-items:center;background:radial-gradient(ellipse at 50% 30%,#0d5313,#010603 70%);display:flex;flex-direction:column;min-height:calc(100vh - 55px);padding:100px 20px;text-align:center}.game-logo{filter:drop-shadow(0 0 22px var(--green));height:125px;width:125px}.game-landing h1{font:600 clamp(48px,8vw,86px)/.88 'Space Grotesk',sans-serif;letter-spacing:-.08em;margin:20px 0}.game-landing h1 em{color:var(--green);font-style:normal}.game-landing>p:not(.section-kicker){color:#91b695;font-size:12px;line-height:1.7;margin:0 auto 28px;max-width:420px}@media(max-width:800px){.site-header{padding:0 15px}.main-nav{display:none}.search-box{width:min(48vw,220px)}.hero-logo{height:145px;width:145px}.hero-wordmark{font-size:58px}.home-hero{min-height:600px}.movies-section{padding:55px 20px 75px}.section-title-row{align-items:start;display:block}.view-button{margin-top:20px}.movie-shelf{grid-template-columns:1fr}.quick-section{align-items:start;display:block;padding:60px 25px}.outline-button{margin-top:32px}.hero-code{right:15px}.hero-scroll{left:15px}}
-@keyframes blink{50%{opacity:0}}
+/* ======================================================================
+   KRYPTON — Home Page
+   ====================================================================== */
+
+/* --- Hero Section --- */
+.home-hero {
+  align-items: center;
+  background:
+    radial-gradient(ellipse at 50% 40%, rgba(12, 76, 16, .55) 0, rgba(3, 28, 7, .7) 38%, rgba(1, 6, 3, .98) 78%);
+  display: flex;
+  justify-content: center;
+  min-height: 92vh;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+/* Orbital rings */
+.home-hero::before,
+.home-hero::after {
+  border: 1px solid rgba(53, 255, 53, .15);
+  border-radius: 50%;
+  content: '';
+  height: 720px;
+  left: 50%;
+  pointer-events: none;
+  position: absolute;
+  top: 75px;
+  transform: translateX(-50%) rotate(-9deg);
+  width: 145%;
+}
+.home-hero::after {
+  animation: float 8s ease-in-out infinite;
+  height: 480px;
+  opacity: .4;
+  top: 195px;
+  transform: translateX(-50%) rotate(15deg);
+  width: 110%;
+}
+
+/* Star field */
+.hero-stars {
+  background-image:
+    radial-gradient(circle, #35ff35 0 1px, transparent 2px),
+    radial-gradient(circle, rgba(182, 255, 156, .6) 0 1px, transparent 2px),
+    radial-gradient(circle, rgba(53, 255, 53, .4) 0 .5px, transparent 1px);
+  background-position: 10% 20%, 80% 35%, 45% 60%;
+  background-size: 180px 150px, 260px 220px, 120px 100px;
+  inset: 0;
+  opacity: .55;
+  position: absolute;
+}
+
+/* Content */
+.home-hero-content {
+  animation: fade-up .8s ease-out;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-logo {
+  animation: float 6s ease-in-out infinite;
+  filter: drop-shadow(0 0 30px rgba(53, 255, 53, .85));
+  height: 190px;
+  object-fit: contain;
+  width: 190px;
+}
+
+.hero-wordmark {
+  color: #fff;
+  font: 700 74px/.75 var(--display);
+  letter-spacing: -.1em;
+  margin: 0 0 28px;
+  text-shadow: 0 0 20px rgba(255, 255, 255, .4), 0 0 60px rgba(53, 255, 53, .15);
+}
+
+.home-hero h1 {
+  color: #eaffea;
+  font: 500 clamp(28px, 5vw, 54px)/1.1 var(--display);
+  letter-spacing: .02em;
+  min-height: 60px;
+  text-shadow: 0 0 20px rgba(192, 255, 177, .55);
+}
+
+.cursor {
+  animation: blink 1s steps(2) infinite;
+  color: var(--green);
+  margin-left: 2px;
+}
+
+.hero-copy {
+  color: #8dba8d;
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 14px 0 28px;
+}
+
+/* Corner annotations */
+.hero-code, .hero-scroll {
+  bottom: 28px;
+  color: #4a8050;
+  font-size: 9px;
+  letter-spacing: .1em;
+  position: absolute;
+  text-transform: uppercase;
+}
+.hero-code { right: 32px; }
+.hero-scroll { left: 32px; }
+
+/* --- Quick Section --- */
+.quick-section {
+  align-items: center;
+  background: radial-gradient(ellipse at 80% 50%, rgba(12, 66, 18, .45), rgba(1, 6, 3, .95) 65%);
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  padding: 90px 12vw;
+}
+.section-kicker {
+  color: var(--green);
+  font-size: 10px;
+  letter-spacing: .14em;
+  margin: 0 0 18px;
+  text-shadow: 0 0 12px var(--green);
+  text-transform: uppercase;
+}
+.quick-section h2 {
+  color: #e4ffe2;
+  font: 600 clamp(38px, 6vw, 68px)/.9 var(--display);
+  letter-spacing: -.08em;
+  text-shadow: 0 0 20px rgba(53, 255, 53, .3);
+}
+.quick-section h2 em {
+  color: var(--green);
+  font-style: normal;
+}
+
+/* --- Game Landing (game.html) --- */
+.game-landing {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 58px);
+  padding: 0 20px 80px;
+  position: relative;
+  text-align: center;
+}
+
+.game-landing-bg {
+  background: radial-gradient(ellipse at 50% 20%, rgba(13, 83, 19, .5), rgba(1, 6, 3, .98) 72%);
+  height: 500px;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.game-landing-content {
+  animation: fade-up .7s ease-out;
+  padding: 80px 20px 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.game-logo {
+  animation: float 7s ease-in-out infinite;
+  filter: drop-shadow(0 0 24px var(--green));
+  height: 110px;
+  width: 110px;
+}
+
+.game-landing h1 {
+  font: 600 clamp(44px, 8vw, 78px)/.88 var(--display);
+  letter-spacing: -.08em;
+  margin: 18px 0 0;
+}
+.game-landing h1 em {
+  color: var(--green);
+  font-style: normal;
+}
+
+.game-count {
+  color: #5e9662;
+  font-size: 11px;
+  letter-spacing: .06em;
+  margin: 12px 0 0;
+  text-transform: uppercase;
+}
+
+.back-home { margin-top: 50px; }
+
+/* ===========================
+   RESPONSIVE — Home
+   =========================== */
+@media (max-width: 800px) {
+  .home-hero { min-height: 100vh; }
+  .hero-logo { height: 145px; width: 145px; }
+  .hero-wordmark { font-size: 56px; }
+  .hero-code { right: 16px; }
+  .hero-scroll { left: 16px; }
+  .quick-section {
+    align-items: start;
+    flex-direction: column;
+    gap: 28px;
+    padding: 60px 24px;
+  }
+  .game-landing-content { padding-top: 60px; }
+}

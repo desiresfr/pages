@@ -1,0 +1,147 @@
+/* ======================================================================
+   KRYPTON — Player Page (play.html)
+   ====================================================================== */
+
+.play-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.player-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 20px;
+  padding: 20px 40px;
+  position: relative;
+  z-index: 2;
+  align-items: center;
+}
+
+/* --- Ad Spaces --- */
+.ad-space {
+  align-items: center;
+  background: var(--glass-bg);
+  border: 1px dashed rgba(53, 255, 53, .3);
+  border-radius: var(--radius-sm);
+  color: #5e9662;
+  display: flex;
+  font-size: 11px;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  overflow: hidden;
+}
+
+.ad-top, .ad-bottom {
+  height: 90px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.player-main-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.ad-side {
+  display: none; /* Hidden on smaller screens */
+  flex-shrink: 0;
+  width: 160px;
+}
+
+/* --- Game Wrapper --- */
+.game-wrapper {
+  background: rgba(6, 20, 8, .8);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 1000px;
+  overflow: hidden;
+}
+
+.game-header {
+  align-items: center;
+  border-bottom: 1px solid var(--glass-border);
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+}
+
+.game-header h1 {
+  color: #eaffea;
+  font: 600 20px var(--display);
+  letter-spacing: -.02em;
+  margin: 0;
+  text-shadow: 0 0 10px var(--glow);
+}
+
+.game-header .glow-button {
+  padding: 10px 16px;
+}
+
+.iframe-container {
+  background: #000;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  position: relative;
+  width: 100%;
+}
+
+.iframe-container iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* Header Tweaks */
+.back-btn {
+  padding: 10px 16px;
+}
+
+/* --- Fullscreen Mode Styles --- */
+/* When the container is in fullscreen mode, we need to override aspect ratio */
+:fullscreen .iframe-container {
+  height: 100vh;
+  padding-bottom: 0;
+}
+
+:-webkit-full-screen .iframe-container {
+  height: 100vh;
+  padding-bottom: 0;
+}
+
+:-moz-full-screen .iframe-container {
+  height: 100vh;
+  padding-bottom: 0;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (min-width: 1100px) {
+  .ad-side {
+    display: flex;
+  }
+}
+
+@media (max-width: 800px) {
+  .player-container {
+    padding: 15px;
+  }
+  .ad-top, .ad-bottom {
+    display: none; /* Hide banners on mobile to save space */
+  }
+  .game-header h1 {
+    font-size: 16px;
+  }
+}

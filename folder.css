@@ -1,0 +1,170 @@
+/* ======================================================================
+   KRYPTON — Folder Game Cards (game.html)
+   ====================================================================== */
+
+.folder-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 0 20px;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+.folder-game-card {
+  align-items: center;
+  animation: fade-up .5s ease-out both;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  color: #eaffea;
+  cursor: pointer;
+  display: flex;
+  gap: 16px;
+  padding: 18px 20px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  transition: border-color .25s, box-shadow .3s, transform .25s, background .25s;
+}
+
+/* Stagger entrance animations */
+.folder-game-card:nth-child(1) { animation-delay: .05s; }
+.folder-game-card:nth-child(2) { animation-delay: .1s; }
+.folder-game-card:nth-child(3) { animation-delay: .15s; }
+.folder-game-card:nth-child(4) { animation-delay: .2s; }
+.folder-game-card:nth-child(5) { animation-delay: .25s; }
+.folder-game-card:nth-child(6) { animation-delay: .3s; }
+
+/* Hover glow gradient behind the card */
+.folder-game-card::before {
+  background: radial-gradient(circle at 30% 50%, rgba(53, 255, 53, .08), transparent 65%);
+  content: '';
+  inset: 0;
+  opacity: 0;
+  position: absolute;
+  transition: opacity .3s;
+}
+
+.folder-game-card:hover {
+  background: rgba(10, 35, 14, .7);
+  border-color: rgba(53, 255, 53, .45);
+  box-shadow:
+    0 0 24px rgba(53, 255, 53, .18),
+    inset 0 0 30px rgba(53, 255, 53, .04);
+  transform: translateY(-3px);
+}
+.folder-game-card:hover::before { opacity: 1; }
+
+/* Number index */
+.card-index {
+  align-items: center;
+  background: rgba(53, 255, 53, .08);
+  border: 1px solid rgba(53, 255, 53, .2);
+  border-radius: 10px;
+  color: var(--green);
+  display: flex;
+  flex-shrink: 0;
+  font-family: var(--display);
+  font-size: 16px;
+  font-weight: 700;
+  height: 46px;
+  justify-content: center;
+  text-shadow: 0 0 10px var(--glow);
+  width: 46px;
+  transition: background .25s, border-color .25s;
+}
+.folder-game-card:hover .card-index {
+  background: rgba(53, 255, 53, .15);
+  border-color: rgba(53, 255, 53, .4);
+}
+
+/* Card body */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+}
+.card-body strong {
+  color: #daffda;
+  font-family: var(--display);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -.02em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.card-file {
+  color: #4c8c52;
+  font-size: 10px;
+  margin-top: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Launch label */
+.launch {
+  align-items: center;
+  color: var(--green);
+  display: flex;
+  flex-shrink: 0;
+  font-size: 10px;
+  gap: 4px;
+  letter-spacing: .06em;
+  opacity: 0;
+  text-transform: uppercase;
+  transform: translateX(-8px);
+  transition: opacity .25s, transform .25s;
+}
+.launch span {
+  font-size: 16px;
+  transition: transform .2s;
+}
+.folder-game-card:hover .launch {
+  opacity: 1;
+  transform: translateX(0);
+}
+.folder-game-card:hover .launch span {
+  transform: translate(2px, -2px);
+}
+
+/* Empty state */
+.empty-shelf {
+  animation: fade-up .5s ease-out;
+  color: #5e9662;
+  font-size: 12px;
+  grid-column: 1 / -1;
+  line-height: 1.8;
+  padding: 40px 20px;
+  text-align: center;
+}
+.empty-shelf strong { color: var(--green); }
+.empty-shelf code {
+  background: rgba(53, 255, 53, .08);
+  border-radius: 4px;
+  color: var(--bright);
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 2px 6px;
+}
+
+/* ===========================
+   RESPONSIVE — Folder Grid
+   =========================== */
+@media (max-width: 600px) {
+  .folder-grid {
+    grid-template-columns: 1fr;
+    padding: 0 12px;
+  }
+  .folder-game-card { padding: 14px 16px; }
+  .launch { opacity: 1; transform: none; }
+}
