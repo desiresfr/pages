@@ -88,7 +88,8 @@ async function loadGames() {
     'Rocket League.html',
     'Bad Parenting.html',
     'Five Nights at Epsteins.html',
-    'FNAF.html'
+    'FNAF.html',
+    'Backrooms.html'
   ];
   renderCards(knownGames);
 }
