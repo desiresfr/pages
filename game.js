@@ -91,7 +91,8 @@ async function loadGames() {
     'FNAF.html',
     'Backrooms.html',
     'Slither io.html',
-    'Super Hot.html'
+    'Super Hot.html',
+    'There is no Game.html'
   ];
   renderCards(knownGames);
 }
