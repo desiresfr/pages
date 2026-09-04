@@ -89,7 +89,8 @@ async function loadGames() {
     'Bad Parenting.html',
     'Five Nights at Epsteins.html',
     'FNAF.html',
-    'Backrooms.html'
+    'Backrooms.html',
+    'Slither io.html'
   ];
   renderCards(knownGames);
 }
