@@ -90,7 +90,8 @@ async function loadGames() {
     'Five Nights at Epsteins.html',
     'FNAF.html',
     'Backrooms.html',
-    'Slither io.html'
+    'Slither io.html',
+    'Super Hot.html'
   ];
   renderCards(knownGames);
 }
