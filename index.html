@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#020803">
+  <title>Krypton | School entertainment hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="folder.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Krypton home"><img src="logo.png" alt="Krypton logo"><span>krypton</span></a>
+    <nav class="main-nav" aria-label="Primary navigation"><a class="active" href="index.html">Home</a><a href="game.html">Games</a></nav>
+    <label class="search-box"><span>⌕</span><input type="search" placeholder="search games" aria-label="Search games"></label>
+  </header>
+
+  <main>
+    <section class="home-hero" aria-labelledby="home-title">
+      <div class="hero-stars"></div>
+      <div class="home-hero-content">
+        <img class="hero-logo" src="logo.png" alt="Krypton logo">
+        <p class="hero-wordmark">krypton</p>
+        <h1 id="home-title"><span class="typewriter"></span><span class="cursor">|</span></h1>
+        <p class="hero-copy">Your school break, upgraded.</p>
+        <a class="glow-button" href="game.html">Enter games <span>→</span></a>
+      </div>
+      <span class="hero-code">KRYPTON // ONLINE</span>
+      <span class="hero-scroll">SCROLL TO EXPLORE</span>
+    </section>
+
+    <section class="quick-section" aria-labelledby="quick-title"><div><div class="section-kicker">01 / Ready when you are</div><h2 id="quick-title">Take five.<br><em>Have fun.</em></h2></div><a class="outline-button" href="game.html">Open game room <span>↗</span></a></section>
+  </main>
+  <footer id="about"><span class="footer-brand">krypton<span>®</span></span><span>Made for school breaks and curious minds.</span><span class="footer-status"><i></i> Safe for school</span></footer>
+  <script src="home.js"></script>
+</body>
+</html>
