@@ -13,9 +13,19 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('game-title').textContent = title;
   document.title = `${title} | Krypton`;
   
-  // Set iframe source
+  // Set iframe source and loading logic
   const iframe = document.getElementById('game-iframe');
-  iframe.src = `Games/${encodeURIComponent(gameFile)}`;
+  const loadingScreen = document.getElementById('loading-screen');
+  
+  // Show loading screen for 2 seconds, then fade out and load the game
+  setTimeout(() => {
+    loadingScreen.style.opacity = '0';
+    
+    setTimeout(() => {
+      loadingScreen.style.display = 'none';
+      iframe.src = `Games/${encodeURIComponent(gameFile)}`;
+    }, 500); // Wait for transition to finish
+  }, 2000); // 2 second loading delay
 
   // Fullscreen logic
   const fullscreenBtn = document.getElementById('fullscreen-btn');

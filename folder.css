@@ -5,9 +5,9 @@
 .folder-grid {
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 1400px;
   padding: 0 20px;
   position: relative;
   width: 100%;
@@ -160,6 +160,12 @@
 /* ===========================
    RESPONSIVE — Folder Grid
    =========================== */
+@media (max-width: 1100px) {
+  .folder-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 600px) {
   .folder-grid {
     grid-template-columns: 1fr;

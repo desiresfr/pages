@@ -68,7 +68,27 @@ async function loadGames() {
     'Escape Road 2.html',
     'Geometry Dash Lite.html',
     'BitLife.html',
-    'BlackJack.html'
+    'BlackJack.html',
+    'Cookie Clicker.html',
+    'Paper io.html',
+    'Slope.html',
+    'Subway Surfers.html',
+    'Agar io Lite.html',
+    'CSGO Clicker.html',
+    'Tetris 64.html',
+    'Basketball Legends.html',
+    'BrawlStars.html',
+    'Ragdoll Archers.html',
+    'Ragdoll Hit.html',
+    'Jetpack Joyride.html',
+    'Spacebar Clicker.html',
+    'Steal a Brainrot.html',
+    'Retro Bowl.html',
+    'Retro Bowl College.html',
+    'Rocket League.html',
+    'Bad Parenting.html',
+    'Five Nights at Epsteins.html',
+    'FNAF.html'
   ];
   renderCards(knownGames);
 }
