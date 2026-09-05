@@ -3,60 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#020803">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="theme-color" content="#010a02">
   <title>Play | Krypton</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="play.css">
-  
-  <!-- Google AdSense Library (Replace client ID when you have your own) -->
+  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="play.css?v=2">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7642141732099289" crossorigin="anonymous"></script>
 </head>
 <body class="play-page">
   <div class="noise"></div>
 
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Krypton home">
+    <span class="brand-center" aria-label="Krypton home">
       <img src="logo.png" alt="Krypton logo"><span>krypton</span>
-    </a>
-    <nav class="main-nav" aria-label="Primary navigation">
-      <a href="index.html">Home</a>
-      <a class="active" href="game.html">Games</a>
-    </nav>
-    <div class="header-tools">
-        <a href="game.html" class="outline-button back-btn">Back to Games <span>↺</span></a>
-    </div>
+    </span>
   </header>
 
+  <nav class="main-nav" aria-label="Primary navigation">
+    <a href="index.html">Home</a>
+    <a href="game.html">Games</a>
+    <a href="movies.html">Movies</a>
+  </nav>
+
   <main class="player-container">
-    <!-- Top Ad Banner -->
     <div class="ad-space ad-top">
-      <!-- Google AdSense Banner -->
-      <ins class="adsbygoogle"
-           style="display:inline-block;width:728px;height:90px"
-           data-ad-client="ca-pub-7642141732099289"
-           data-ad-slot="1234567890"></ins>
-      <script>
-           (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
+      <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-7642141732099289" data-ad-slot="1234567890"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
     <div class="player-main-row">
-      <!-- Left Ad Sidebar -->
       <div class="ad-space ad-side">
-        <!-- Google AdSense Sidebar -->
-        <ins class="adsbygoogle"
-             style="display:inline-block;width:160px;height:600px"
-             data-ad-client="ca-pub-7642141732099289"
-             data-ad-slot="1234567890"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+        <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-7642141732099289" data-ad-slot="1234567890"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       </div>
 
-      <!-- Game Frame Area -->
       <div class="game-wrapper">
         <div class="game-header">
             <h1 id="game-title">Loading...</h1>
@@ -73,32 +58,21 @@
         </div>
       </div>
 
-      <!-- Right Ad Sidebar -->
       <div class="ad-space ad-side">
-        <!-- Google AdSense Sidebar -->
-        <ins class="adsbygoogle"
-             style="display:inline-block;width:160px;height:600px"
-             data-ad-client="ca-pub-1234567890123456"
-             data-ad-slot="1234567890"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+        <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-1234567890123456" data-ad-slot="1234567890"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       </div>
     </div>
-    
-    <!-- Bottom Ad Banner -->
+
     <div class="ad-space ad-bottom">
-      <!-- Google AdSense Banner -->
-      <ins class="adsbygoogle"
-           style="display:inline-block;width:728px;height:90px"
-           data-ad-client="ca-pub-1234567890123456"
-           data-ad-slot="1234567890"></ins>
-      <script>
-           (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
+      <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-1234567890123456" data-ad-slot="1234567890"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
   </main>
 
-  <script src="play.js"></script>
+  <script src="play.js?v=2"></script>
+  <script src="user-count.js?v=2"></script>
+  <script src="ctx-menu.js?v=2"></script>
+  <script src="site-gate.js?v=2"></script>
 </body>
 </html>

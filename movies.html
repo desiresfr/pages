@@ -7,8 +7,8 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <meta name="theme-color" content="#010a02">
-  <meta name="description" content="Browse and launch games on Krypton — your school entertainment hub.">
-  <title>Games | Krypton</title>
+  <meta name="description" content="Watch movies on Krypton — your school entertainment hub.">
+  <title>Movies | Krypton</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="home.css?v=2">
   <link rel="stylesheet" href="folder.css?v=2">
 </head>
-<body class="game-page">
+<body class="movie-page">
   <div class="noise"></div>
 
   <header class="site-header">
@@ -27,26 +27,34 @@
 
   <nav class="main-nav" aria-label="Primary navigation">
     <a href="index.html">Home</a>
-    <a class="active" href="game.html">Games</a>
-    <a href="movies.html">Movies</a>
+    <a href="game.html">Games</a>
+    <a class="active" href="movies.html">Movies</a>
   </nav>
 
   <main class="game-landing">
     <div class="game-landing-bg"></div>
     <div class="game-landing-content">
-      <p class="section-kicker"><span class="pulse-dot"></span> KRYPTON / GAME ROOM</p>
+      <p class="section-kicker"><span class="pulse-dot"></span> KRYPTON / MOVIE ROOM</p>
       <img src="logo.png" alt="" class="game-logo">
-      <h1>Choose your<br><em>next game.</em></h1>
-      <p id="game-count" class="game-count">Scanning...</p>
+      <h1>Choose your<br><em>next movie.</em></h1>
+      <p id="movie-count" class="game-count">Loading...</p>
     </div>
 
-    <div class="folder-grid" id="game-shelf">
-      <p class="empty-shelf">Scanning the Games folder...</p>
+    <div class="continue-section" id="continue-section" style="display:none">
+      <div class="continue-header">
+        <span class="pulse-dot"></span>
+        <span class="section-kicker">Continue Watching</span>
+      </div>
+      <div class="continue-row" id="continue-shelf"></div>
+    </div>
+
+    <div class="folder-grid" id="movie-shelf">
+      <p class="empty-shelf">Loading movies...</p>
     </div>
 
     <div class="show-more-row">
-      <button id="show-more-games" class="show-more-btn" style="display:none">Show <span>0</span> more</button>
-      <button id="show-all-games" class="show-more-btn" style="display:none">Show all</button>
+      <button id="show-more-movies" class="show-more-btn" style="display:none">Show <span>0</span> more</button>
+      <button id="show-all-movies" class="show-more-btn" style="display:none">Show all</button>
     </div>
 
     <a class="glow-button back-home" href="index.html">Back home <span>↗</span></a>
@@ -58,8 +66,7 @@
     <span class="footer-status"><i></i> Safe for school</span>
   </footer>
 
-  <script src="game.js?v=2"></script>
-  <script src="user-count.js?v=2"></script>
+  <script src="movies.js?v=2"></script>
   <script src="ctx-menu.js?v=2"></script>
   <script src="site-gate.js?v=2"></script>
 </body>

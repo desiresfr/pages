@@ -1,10 +1,10 @@
 /* ======================================================================
-   KRYPTON — Folder Game Cards (game.html)
+   KRYPTON — Folder Cards (game.html / movies.html)
    ====================================================================== */
 
 .folder-grid {
   display: grid;
-  gap: 16px;
+  gap: 12px;
   grid-template-columns: repeat(4, 1fr);
   margin: 0 auto;
   max-width: 1400px;
@@ -16,75 +16,67 @@
 
 .folder-game-card {
   align-items: center;
-  animation: fade-up .5s ease-out both;
-  background: var(--glass-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius);
-  color: #eaffea;
+  animation: fade-up .4s ease-out both;
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  color: var(--text);
   cursor: pointer;
   display: flex;
-  gap: 16px;
-  padding: 18px 20px;
+  gap: 14px;
+  padding: 14px 16px;
   position: relative;
   overflow: hidden;
   text-decoration: none;
-  transition: border-color .25s, box-shadow .3s, transform .25s, background .25s;
+  transition: border-color .25s, box-shadow .25s, transform .25s;
 }
 
-/* Stagger entrance animations */
-.folder-game-card:nth-child(1) { animation-delay: .05s; }
-.folder-game-card:nth-child(2) { animation-delay: .1s; }
-.folder-game-card:nth-child(3) { animation-delay: .15s; }
-.folder-game-card:nth-child(4) { animation-delay: .2s; }
-.folder-game-card:nth-child(5) { animation-delay: .25s; }
-.folder-game-card:nth-child(6) { animation-delay: .3s; }
+.folder-game-card:nth-child(1) { animation-delay: .03s; }
+.folder-game-card:nth-child(2) { animation-delay: .06s; }
+.folder-game-card:nth-child(3) { animation-delay: .09s; }
+.folder-game-card:nth-child(4) { animation-delay: .12s; }
+.folder-game-card:nth-child(5) { animation-delay: .15s; }
+.folder-game-card:nth-child(6) { animation-delay: .18s; }
 
-/* Hover glow gradient behind the card */
 .folder-game-card::before {
-  background: radial-gradient(circle at 30% 50%, rgba(53, 255, 53, .08), transparent 65%);
+  background: radial-gradient(circle at 20% 50%, rgba(53, 255, 53, .04), transparent 55%);
   content: '';
   inset: 0;
   opacity: 0;
   position: absolute;
-  transition: opacity .3s;
+  transition: opacity .25s;
 }
 
 .folder-game-card:hover {
-  background: rgba(10, 35, 14, .7);
-  border-color: rgba(53, 255, 53, .45);
-  box-shadow:
-    0 0 24px rgba(53, 255, 53, .18),
-    inset 0 0 30px rgba(53, 255, 53, .04);
-  transform: translateY(-3px);
+  background: rgba(5, 22, 8, .85);
+  border-color: var(--border-hover);
+  box-shadow: 0 4px 20px rgba(53, 255, 53, .08);
+  transform: translateY(-2px);
 }
 .folder-game-card:hover::before { opacity: 1; }
 
-/* Number index */
 .card-index {
   align-items: center;
-  background: rgba(53, 255, 53, .08);
-  border: 1px solid rgba(53, 255, 53, .2);
-  border-radius: 10px;
+  background: rgba(53, 255, 53, .05);
+  border: 1px solid rgba(53, 255, 53, .12);
+  border-radius: var(--r-sm);
   color: var(--green);
   display: flex;
   flex-shrink: 0;
   font-family: var(--display);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
-  height: 46px;
+  height: 40px;
   justify-content: center;
-  text-shadow: 0 0 10px var(--glow);
-  width: 46px;
-  transition: background .25s, border-color .25s;
+  width: 40px;
+  transition: background .2s, border-color .2s;
 }
 .folder-game-card:hover .card-index {
-  background: rgba(53, 255, 53, .15);
-  border-color: rgba(53, 255, 53, .4);
+  background: rgba(53, 255, 53, .1);
+  border-color: rgba(53, 255, 53, .3);
 }
 
-/* Card body */
 .card-body {
   display: flex;
   flex-direction: column;
@@ -93,17 +85,17 @@
   text-align: left;
 }
 .card-body strong {
-  color: #daffda;
+  color: #d0ecd2;
   font-family: var(--display);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
-  letter-spacing: -.02em;
+  letter-spacing: -.01em;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 .card-file {
-  color: #4c8c52;
+  color: #356838;
   font-size: 10px;
   margin-top: 3px;
   overflow: hidden;
@@ -111,36 +103,54 @@
   white-space: nowrap;
 }
 
-/* Launch label */
 .launch {
   align-items: center;
   color: var(--green);
   display: flex;
   flex-shrink: 0;
-  font-size: 10px;
-  gap: 4px;
+  font-size: 9px;
+  gap: 3px;
   letter-spacing: .06em;
   opacity: 0;
   text-transform: uppercase;
-  transform: translateX(-8px);
-  transition: opacity .25s, transform .25s;
+  transform: translateX(-6px);
+  transition: opacity .2s, transform .2s;
 }
-.launch span {
-  font-size: 16px;
-  transition: transform .2s;
-}
-.folder-game-card:hover .launch {
-  opacity: 1;
-  transform: translateX(0);
-}
-.folder-game-card:hover .launch span {
-  transform: translate(2px, -2px);
+.launch span { font-size: 14px; transition: transform .15s; }
+.folder-game-card:hover .launch { opacity: 1; transform: translateX(0); }
+.folder-game-card:hover .launch span { transform: translate(1px, -1px); }
+
+.show-more-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin: 18px auto 0;
+  width: 100%;
 }
 
-/* Empty state */
+.show-more-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  color: var(--green);
+  cursor: pointer;
+  font: 500 11px var(--mono);
+  letter-spacing: .04em;
+  padding: 10px 28px;
+  text-transform: uppercase;
+  transition: background .2s, border-color .2s, box-shadow .2s;
+}
+.show-more-btn:hover {
+  background: rgba(53, 255, 53, .06);
+  border-color: var(--border-hover);
+  box-shadow: 0 0 14px rgba(53, 255, 53, .08);
+}
+
+.back-home { margin-top: 30px; }
+
 .empty-shelf {
-  animation: fade-up .5s ease-out;
-  color: #5e9662;
+  animation: fade-up .4s ease-out;
+  color: #3a6a3e;
   font-size: 12px;
   grid-column: 1 / -1;
   line-height: 1.8;
@@ -149,28 +159,17 @@
 }
 .empty-shelf strong { color: var(--green); }
 .empty-shelf code {
-  background: rgba(53, 255, 53, .08);
+  background: rgba(53, 255, 53, .05);
   border-radius: 4px;
-  color: var(--bright);
+  color: #a5ff82;
   font-family: var(--mono);
   font-size: 11px;
   padding: 2px 6px;
 }
 
-/* ===========================
-   RESPONSIVE — Folder Grid
-   =========================== */
-@media (max-width: 1100px) {
-  .folder-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
+@media (max-width: 1100px) { .folder-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) {
-  .folder-grid {
-    grid-template-columns: 1fr;
-    padding: 0 12px;
-  }
-  .folder-game-card { padding: 14px 16px; }
+  .folder-grid { grid-template-columns: 1fr; padding: 0 12px; }
+  .folder-game-card { padding: 12px 14px; }
   .launch { opacity: 1; transform: none; }
 }

@@ -3,31 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#020803">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="theme-color" content="#010a02">
   <meta name="description" content="Krypton — Your school break, upgraded. Games and entertainment for curious minds.">
   <title>Krypton | School entertainment hub</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="home.css?v=2">
 </head>
 <body>
   <div class="noise"></div>
 
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Krypton home">
+    <span class="brand-center" aria-label="Krypton home">
       <img src="logo.png" alt="Krypton logo"><span>krypton</span>
-    </a>
-    <nav class="main-nav" aria-label="Primary navigation">
-      <a class="active" href="index.html">Home</a>
-      <a href="game.html">Games</a>
-    </nav>
-    <label class="search-box">
-      <span>⌕</span>
-      <input type="search" placeholder="search games" aria-label="Search games">
-    </label>
+    </span>
   </header>
+
+  <nav class="main-nav" aria-label="Primary navigation">
+    <a class="active" href="index.html">Home</a>
+    <a href="game.html">Games</a>
+    <a href="movies.html">Movies</a>
+  </nav>
 
   <main>
     <section class="home-hero" aria-labelledby="home-title">
@@ -35,7 +36,9 @@
       <div class="home-hero-content">
         <img class="hero-logo" src="logo.png" alt="Krypton logo">
         <p class="hero-wordmark">krypton</p>
-        <h1 id="home-title"><span class="typewriter"></span><span class="cursor">|</span></h1>
+        <div class="hero-tagline">
+          <h1 id="home-title"><span class="typewriter"></span><span class="cursor">|</span></h1>
+        </div>
         <p class="hero-copy">Your school break, upgraded.</p>
         <a class="glow-button" href="game.html">Enter games <span>→</span></a>
       </div>
@@ -58,6 +61,9 @@
     <span class="footer-status"><i></i> Safe for school</span>
   </footer>
 
-  <script src="home.js"></script>
+  <script src="home.js?v=2"></script>
+  <script src="user-count.js?v=2"></script>
+  <script src="ctx-menu.js?v=2"></script>
+  <script src="site-gate.js?v=2"></script>
 </body>
 </html>

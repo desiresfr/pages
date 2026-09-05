@@ -1,65 +1,48 @@
 /* ======================================================================
-   KRYPTON — Player Page (play.html)
+   KRYPTON — Player Page
    ====================================================================== */
 
-.play-page {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+.play-page { display: flex; flex-direction: column; min-height: 100vh; }
 
 .player-container {
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: 20px;
-  padding: 20px 40px;
+  gap: 16px;
+  padding: 20px 36px;
   position: relative;
   z-index: 2;
   align-items: center;
 }
 
-/* --- Ad Spaces --- */
 .ad-space {
   align-items: center;
-  background: var(--glass-bg);
-  border: 1px dashed rgba(53, 255, 53, .3);
-  border-radius: var(--radius-sm);
-  color: #5e9662;
+  background: var(--bg-card);
+  border: 1px dashed rgba(53, 255, 53, .15);
+  border-radius: var(--r-sm);
+  color: #3a6a3e;
   display: flex;
-  font-size: 11px;
+  font-size: 10px;
   justify-content: center;
   text-transform: uppercase;
   letter-spacing: .05em;
-  overflow: hidden;
 }
-
-.ad-top, .ad-bottom {
-  height: 90px;
-  width: 100%;
-  max-width: 900px;
-}
+.ad-top, .ad-bottom { height: 90px; width: 100%; max-width: 900px; }
 
 .player-main-row {
   display: flex;
-  gap: 20px;
+  gap: 16px;
   justify-content: center;
   width: 100%;
   max-width: 1400px;
 }
+.ad-side { display: none; flex-shrink: 0; width: 160px; }
 
-.ad-side {
-  display: none; /* Hidden on smaller screens */
-  flex-shrink: 0;
-  width: 160px;
-}
-
-/* --- Game Wrapper --- */
 .game-wrapper {
-  background: rgba(6, 20, 8, .8);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius);
-  box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+  background: rgba(3, 12, 5, .9);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, .5);
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -69,44 +52,32 @@
 
 .game-header {
   align-items: center;
-  border-bottom: 1px solid var(--glass-border);
+  background: rgba(4, 16, 6, .6);
+  border-bottom: 1px solid var(--border);
   display: flex;
   justify-content: space-between;
-  padding: 12px 20px;
+  padding: 12px 18px;
 }
-
 .game-header h1 {
-  color: #eaffea;
-  font: 600 20px var(--display);
+  color: var(--text);
+  font: 600 17px var(--display);
   letter-spacing: -.02em;
   margin: 0;
-  text-shadow: 0 0 10px var(--glow);
 }
-
-.game-header .glow-button {
-  padding: 10px 16px;
-}
+.game-header .glow-button { padding: 9px 16px; }
 
 .iframe-container {
   background: #000;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  padding-bottom: 56.25%;
   position: relative;
   width: 100%;
 }
+.iframe-container iframe { border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%; }
 
-.iframe-container iframe {
-  border: 0;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-/* Loading Screen */
+/* Loading */
 .loading-screen {
   align-items: center;
-  background: #020803;
+  background: #010a02;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -114,80 +85,149 @@
   left: 0;
   position: absolute;
   top: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity .5s;
   width: 100%;
   z-index: 10;
 }
-
 .loading-logo {
-  animation: float 4s ease-in-out infinite, pulse-glow 2s infinite;
-  filter: drop-shadow(0 0 20px rgba(53, 255, 53, 0.6));
-  height: 120px;
-  margin-bottom: 30px;
-  width: 120px;
+  animation: float 3.5s ease-in-out infinite, pulse 2s infinite;
+  filter: drop-shadow(0 0 18px rgba(53, 255, 53, .4));
+  height: 90px;
+  margin-bottom: 24px;
+  width: 90px;
 }
-
 .loading-bar-container {
-  background: rgba(53, 255, 53, 0.1);
-  border: 1px solid var(--glass-border);
-  border-radius: 4px;
-  height: 6px;
+  background: rgba(53, 255, 53, .06);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  height: 4px;
   overflow: hidden;
-  width: 200px;
+  width: 160px;
 }
-
 .loading-bar {
   animation: loading 2s infinite linear;
   background: var(--green);
-  box-shadow: 0 0 10px var(--green);
+  box-shadow: 0 0 8px var(--green);
   height: 100%;
   width: 30%;
 }
+@keyframes loading { 0% { transform: translateX(-100%); } 100% { transform: translateX(350%); } }
 
-@keyframes loading {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(350%); }
-}
+.back-btn { padding: 9px 14px; }
 
-/* Header Tweaks */
-.back-btn {
-  padding: 10px 16px;
-}
+:fullscreen .iframe-container,
+:-webkit-full-screen .iframe-container,
+:-moz-full-screen .iframe-container { height: 100vh; padding-bottom: 0; }
 
-/* --- Fullscreen Mode Styles --- */
-/* When the container is in fullscreen mode, we need to override aspect ratio */
-:fullscreen .iframe-container {
-  height: 100vh;
-  padding-bottom: 0;
-}
-
-:-webkit-full-screen .iframe-container {
-  height: 100vh;
-  padding-bottom: 0;
-}
-
-:-moz-full-screen .iframe-container {
-  height: 100vh;
-  padding-bottom: 0;
-}
-
-/* ===========================
-   RESPONSIVE
-   =========================== */
-@media (min-width: 1100px) {
-  .ad-side {
-    display: flex;
-  }
-}
-
+@media (min-width: 1100px) { .ad-side { display: flex; } }
 @media (max-width: 800px) {
-  .player-container {
-    padding: 15px;
-  }
-  .ad-top, .ad-bottom {
-    display: none; /* Hide banners on mobile to save space */
-  }
-  .game-header h1 {
-    font-size: 16px;
-  }
+  .player-container { padding: 12px; }
+  .ad-top, .ad-bottom { display: none; }
+  .game-header h1 { font-size: 14px; }
 }
+
+/* ===== VIDEO PLAYER ===== */
+.video-player { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; }
+.video-player video { position: absolute; inset: 0; width: 100%; height: 100%; background: #000; cursor: pointer; }
+
+.video-controls {
+  align-items: center;
+  background: linear-gradient(transparent, rgba(1, 10, 2, .95));
+  border-top: 1px solid rgba(53, 255, 53, .08);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 16px 12px;
+  position: relative;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity .3s;
+}
+.video-player:hover .video-controls, .video-controls.show { opacity: 1; }
+
+.vc-seek { align-items: center; display: flex; gap: 10px; width: 100%; }
+.vc-seek input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: rgba(53, 255, 53, .1);
+  border-radius: 3px;
+  cursor: pointer;
+  flex: 1;
+  height: 4px;
+  outline: none;
+  transition: height .12s;
+}
+.vc-seek input[type="range"]:hover { height: 6px; }
+.vc-seek input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none;
+  background: var(--green); border-radius: 50%; box-shadow: 0 0 8px var(--green);
+  cursor: pointer; height: 12px; width: 12px;
+}
+.vc-seek input[type="range"]::-moz-range-thumb {
+  background: var(--green); border: none; border-radius: 50%; box-shadow: 0 0 8px var(--green);
+  cursor: pointer; height: 12px; width: 12px;
+}
+.vc-seek input[type="range"]::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, var(--green) 0%, var(--green) var(--progress, 0%), rgba(53, 255, 53, .1) var(--progress, 0%));
+  border-radius: 3px; height: 4px;
+}
+.vc-seek input[type="range"]::-moz-range-track {
+  background: linear-gradient(to right, var(--green) 0%, var(--green) var(--progress, 0%), rgba(53, 255, 53, .1) var(--progress, 0%));
+  border-radius: 3px; height: 4px;
+}
+.vc-time { color: #3a6a3e; font: 400 10px var(--mono); min-width: 120px; text-align: center; white-space: nowrap; }
+
+.vc-row { align-items: center; display: flex; gap: 4px; width: 100%; }
+.vc-btn {
+  align-items: center; background: none; border: none; color: #7cc77f;
+  cursor: pointer; display: flex; height: 36px; justify-content: center;
+  padding: 0; transition: color .15s, transform .12s; width: 36px;
+}
+.vc-btn:hover { color: var(--green); transform: scale(1.08); }
+.vc-btn svg { fill: currentColor; height: 18px; width: 18px; }
+.vc-btn.play-btn svg { height: 22px; width: 22px; }
+
+.vc-volume { align-items: center; display: flex; gap: 3px; }
+.vc-volume input[type="range"] {
+  -webkit-appearance: none; appearance: none;
+  background: rgba(53, 255, 53, .1); border-radius: 3px;
+  cursor: pointer; height: 3px; outline: none; width: 60px; transition: width .15s;
+}
+.vc-volume:hover input[type="range"] { width: 80px; }
+.vc-volume input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none;
+  background: var(--green); border-radius: 50%; box-shadow: 0 0 5px var(--green);
+  cursor: pointer; height: 10px; width: 10px;
+}
+.vc-volume input[type="range"]::-moz-range-thumb {
+  background: var(--green); border: none; border-radius: 50%; box-shadow: 0 0 5px var(--green);
+  cursor: pointer; height: 10px; width: 10px;
+}
+.vc-spacer { flex: 1; }
+
+.vc-big-play {
+  align-items: center; background: rgba(53, 255, 53, .08); backdrop-filter: blur(8px);
+  border: 2px solid rgba(53, 255, 53, .3); border-radius: 50%; cursor: pointer;
+  display: flex; height: 68px; justify-content: center; left: 50%;
+  position: absolute; top: 50%; transform: translate(-50%, -50%);
+  transition: background .2s, transform .2s; width: 68px; z-index: 4;
+}
+.vc-big-play:hover {
+  background: rgba(53, 255, 53, .15); box-shadow: 0 0 30px rgba(53, 255, 53, .15);
+  transform: translate(-50%, -50%) scale(1.06);
+}
+.vc-big-play svg { fill: var(--green); height: 30px; margin-left: 3px; width: 30px; filter: drop-shadow(0 0 8px var(--green)); }
+.vc-big-play.hidden { display: none; }
+
+/* Resume */
+.resume-overlay {
+  align-items: center; background: rgba(1, 10, 2, .88); backdrop-filter: blur(14px);
+  display: flex; inset: 0; justify-content: center; position: absolute; z-index: 6;
+}
+.resume-box {
+  background: rgba(4, 16, 6, .85); border: 1px solid var(--border);
+  border-radius: var(--r); padding: 36px 44px; text-align: center;
+}
+.resume-title { color: var(--text); font: 600 20px var(--display); margin-bottom: 6px; }
+.resume-sub { color: #3a6a3e; font: 400 11px var(--mono); margin-bottom: 24px; }
+.resume-btns { display: flex; gap: 10px; justify-content: center; }
+.resume-btns .glow-button, .resume-btns .outline-button { font-size: 10px; padding: 11px 18px; }
